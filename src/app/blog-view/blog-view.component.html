@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row" *ngIf="currentBlog" style="text-align: center">
+    <div class="col-md-12">
+      <h3>{{currentBlog.title}}</h3>
+      <p>posted by {{currentBlog.author}}
+        <br> Views: {{currentBlog.views}}</p>
+      <hr>
+      <div>{{currentBlog.description}} </div>
+      <hr>
+      <p> {{currentBlog.category}}</p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="col-md-4">
+      <a class="btn btn-primary">Edit</a>
+    </div>
+    <div class="col-md-4">
+      <a class="btn btn-danger" (click)="deleteThisBlog()" >Delete</a>
+    </div>
+    <div class="col-md-4">
+      <a class="btn btn-success" [routerLink]="['/home']">Go Back</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div style="text-align: center">
+  <div class="container">
+    <div class="row header">
+      <div class="col-md-12">
+        <a style="color: #fff" class="title">{{title}}</a>
+      </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li role="presentation" ><a [routerLink]="['/home']" routerLinkActive="current active" >Home</a></li>
+        <li role="presentation"><a [routerLink]="['/about']" routerLinkActive=" current active " >About</a></li>
+        <li role="presentation"><a [routerLink]="['/create']" routerLinkActive="current active " >Post a Blog</a></li>
+      </ul>
+  </div>
+  
+  
+</div>
+<br>
+<router-outlet></router-outlet>

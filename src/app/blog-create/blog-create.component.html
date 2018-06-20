@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row" style="text-align: left">
+    <div class="col-md-12">
+      <form #createBlogForm="ngForm" (ngSubmit)="createBlog()">
+
+        <div class="form-group">
+          <label>Blog Title</label>
+          <input type="text" name="blogTitle" [(ngModel)]="blogTitle" #title="ngModel" placeholder="Enter blog Title" class="form-control"
+            required>
+        </div>
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Blog title is required</div>
+
+        <div class="form-group">
+          <label>Blog Description</label>
+          <input type="text" name="blogDescription" #description="ngModel" [(ngModel)]="blogDescription" placeholder="Enter blog Description"
+            class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label>blog BodyHtml</label>
+          <input type="text" name="blogBodyHtml" #bodyHtml="ngModel" [(ngModel)]="blogBodyHtml" rows="3" placeholder="Enter blog Body"
+            class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Category</label>
+          <input type="text" class="form-control" name="blogCategory" [(ngModel)]="blogCategory" #category="ngModel" required >
+        </div>
+        <button type="submit" class="btn btn-success btn-md btn-block" [disabled]="!createBlogForm.form.valid">Add Post</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
